@@ -1,9 +1,14 @@
-spring.application.name=kafka-cart-order-service
-server.port=8083
-spring.kafka.producer.bootstrap-servers: localhost:9092
+spring:
+  application:
+    name: kafka-cart-order-service
+  server:
+    port: 8083
 
-spring.kafka.producer.key-serializer: org.apache.kafka.common.serialization.StringSerializer
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    topic:
+      name: order_topics
 
-spring.kafka.producer.value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-
-spring.kafka.topic.name=order_topics
