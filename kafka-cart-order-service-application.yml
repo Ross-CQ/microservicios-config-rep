@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: kafka-cart-order-service
+  config:
+    import: configserver:http://localhost:8888
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
