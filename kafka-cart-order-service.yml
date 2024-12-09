@@ -1,6 +1,3 @@
-spring:
-  application:
-    name: kafka-cart-order-service
   server:
     port: 8083
 
